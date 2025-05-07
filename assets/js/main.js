@@ -361,21 +361,35 @@
 
         const testimonialImageSlider = new Swiper(".testimonial-image-slider", {
             speed: 1000,
-            loop: true,
+            loop: false,
             spaceBetween: 10,
             slidesPerView: 3,
             freeMode: true,
             watchSlidesProgress: true,
-            autoplay:true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
             grabCursor: true,
             centeredSlides: true,
+            navigation: {
+                nextEl: ".testimonial-next",
+                prevEl: ".testimonial-prev"
+            }
         });
 
         const testimonialContentSlider = new Swiper(".testimonial-content-slider", {
             speed: 1000,
-            loop: "true",
-            autoplay:true,
+            loop: false,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
             centeredSlides: true,
+            navigation: {
+                nextEl: ".testimonial-next",
+                prevEl: ".testimonial-prev"
+            }
         });
 
         testimonialContentSlider.controller.control = testimonialImageSlider;
@@ -958,6 +972,25 @@
             });
         });
 
+        // Deshabilitar el botón 'Atrás' en el primer slide de testimonios
+        function updateTestimonialNav(swiper) {
+            const prevBtn = document.querySelector('.testimonial-prev');
+            // Desactiva el botón 'Atrás' si está en el primer slide
+            if (swiper.isBeginning) {
+                prevBtn.disabled = true;
+            } else {
+                prevBtn.disabled = false;
+            }
+        }
+
+        testimonialImageSlider.on('slideChange', function() {
+            updateTestimonialNav(this);
+        });
+        testimonialContentSlider.on('slideChange', function() {
+            updateTestimonialNav(this);
+        });
+        // Llama la función al cargar la página
+        updateTestimonialNav(testimonialImageSlider);
 
     }); // End Document Ready Function
 
