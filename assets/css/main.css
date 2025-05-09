@@ -4786,30 +4786,6 @@ input.main-search-input::placeholder {
   }
 }
 @media (max-width: 575px) {
-  .food-menu-wrapper-2 .tab-food-menu-items .nav {
-    gap: 15px;
-  }
-}
-.food-menu-wrapper-2 .tab-food-menu-items .nav .nav-link {
-  padding: 12px 30px 12px 20px;
-  background-color: #EBEBEB;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 20px;
-  text-transform: capitalize;
-  color: var(--header);
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-@media (max-width: 991px) {
-  .food-menu-wrapper-2 .tab-food-menu-items .nav .nav-link {
-    padding: 14px 45px;
-    font-size: 18px;
-  }
-}
-@media (max-width: 575px) {
   .food-menu-wrapper-2 .tab-food-menu-items .nav .nav-link {
     padding: 12px 20px;
     font-size: 14px;
@@ -5585,9 +5561,6 @@ input.main-search-input::placeholder {
 }
 .team-reservation-wrapper .team-reservation-items .reservation-title h3 span {
   color: var(--theme);
-}
-.team-reservation-wrapper .team-reservation-items .form-clt {
-  position: relative;
 }
 .team-reservation-wrapper .team-reservation-items .form-clt .icon {
   position: absolute;
@@ -9572,16 +9545,6 @@ input.main-search-input::placeholder {
   }
 }
 @media (max-width: 575px) {
-  .testimonial-wrapper-3 .testimonial-content {
-    text-align: center;
-    margin: 0 auto;
-  }
-}
-.testimonial-wrapper-3 .testimonial-content h4 {
-  color: var(--theme2);
-  margin-bottom: 20px;
-}
-@media (max-width: 575px) {
   .testimonial-wrapper-3 .testimonial-content h4 {
     margin-bottom: 15px;
   }
@@ -11404,17 +11367,17 @@ p.sticky-label {
   margin-bottom: 5px;
 }
 .contact-info-items:hover, .contact-info-items.active {
-  background-color: var(--theme);
+  background-color: var(--white) !important;
 }
 .contact-info-items:hover::before, .contact-info-items.active::before {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 .contact-info-items:hover .icon, .contact-info-items.active .icon {
-  filter: grayscale(100%) brightness(300%);
+  filter: none !important;
 }
 .contact-info-items:hover .content h3, .contact-info-items:hover .content p, .contact-info-items.active .content h3, .contact-info-items.active .content p {
-  color: var(--white);
+  color: inherit !important;
 }
 
 .contact-area .map-content-area h3 {
