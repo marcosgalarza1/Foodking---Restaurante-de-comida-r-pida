@@ -30,6 +30,18 @@
         <link rel="stylesheet" href="assets/css/main.css">
         <!--<< Style.css >>-->
         <link rel="stylesheet" href="style.css">
+        <style>
+        .contact-info-items .content h3,
+        .contact-info-items .content p {
+            color: var(--header) !important;
+        }
+        .contact-info-items:hover .content h3,
+        .contact-info-items:hover .content p,
+        .contact-info-items.active .content h3,
+        .contact-info-items.active .content p {
+            color: var(--header) !important;
+        }
+        </style>
     </head>
 
     <body>
@@ -319,43 +331,42 @@
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="contact-info-items text-center">
+                        <div class="contact-info-items text-center" style="cursor:pointer" onclick="enviarPedidoWhatsApp()">
                             <div class="icon">
-                                <img src="assets/img/icon/Yango__1.svg" alt="icon-img">
+                                <img src="assets/img/icon/Yango1.png" alt="icon-img">
                             </div>
                             <div class="content">
                                 <h3>delivery</h3>
                                 <p>
-                                   +59175620296<br>
+                                   75620296<br>
                                  
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="contact-info-items active text-center">
+                        <div class="contact-info-items active text-center" style="cursor:pointer" onclick="enviarPedidoWhatsApp()">
                             <div class="icon">
-                                <img src="assets/img/icon/phone.svg" alt="icon-img">
+                                <img src="assets/img/icon/w.png" alt="icon-img">
                             </div>
                             <div class="content">
                                 <h3>WhatsApp</h3>
                                 <p>
-                                   +59175620296 <br>
+                                   75620296 <br>
                                    
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="contact-info-items text-center">
+                        <div class="contact-info-items text-center" style="cursor:pointer" onclick="enviarPedidoWhatsApp()">
                             <div class="icon">
-                                <img src="assets/img/icon/email.svg" alt="icon-img">
+                                <img src="assets/img/icon/p2.png" alt="icon-img">
                             </div>
                             <div class="content">
-                                <h3>Mail Adress</h3>
+                                <h3>Delivery</h3>
                                 <p>
-                                    email@example.com <br>
-                                    info@yourdomain.com
+                                    75620296
                                 </p>
                             </div>
                         </div>
@@ -373,41 +384,35 @@
                             <div class="map-content-area">
                                 <h3 class="wow fadeInUp" data-wow-delay=".3s">Ubicacion en google-maps</h3>
                                 <p class="wow fadeInUp" data-wow-delay=".5s">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit mattis <br>
-                                    faucibus odio feugiat arc dolor.
+                                    Encuéntranos fácilmente a través de Google Maps.  <br>
+                                    Estamos ubicados en una zona accesible y segura, lista para recibirte con el mejor servicio.
                                 </p>
                                 <div class="google-map wow fadeInUp" data-wow-delay=".7s">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d672.5012884765865!2d-63.19223851443148!3d-17.8744311053762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDUyJzI3LjkiUyA2M8KwMTEnMzEuMyJX!5e1!3m2!1ses!2sbo!4v1746762102597!5m2!1ses!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 mt-5 mt-lg-0">
                             <div class="contact-form-items">
                                 <div class="contact-title">
-                                    <h3 class="wow fadeInUp" data-wow-delay=".3s">Fill Up The Form</h3>
-                                    <p class="wow fadeInUp" data-wow-delay=".5s">Your email address will not be published. Required fields are marked *</p>
+                                    <h3 class="wow fadeInUp" data-wow-delay=".3s">Envíanos tus Preguntas Sugerencias y Reclamos</h3>
+                                    <p class="wow fadeInUp" data-wow-delay=".5s">Tus preguntas, sugerencias y reclamos nos ayudarán a mejorar nuestro servicio.</p>
+
                                 </div>
-                                <form action="contact.php" id="contact-form" method="POST">
+                                <form id="contact-form">
                                     <div class="row g-4">
                                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
                                             <div class="form-clt">
-                                                <input type="text" name="name" id="name" placeholder="Your Name*">
+                                                <input type="text" name="name" id="name" placeholder="ingresar tu nombre (opcional)">
                                                 <div class="icon">
                                                     <i class="fal fa-user"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
-                                            <div class="form-clt">
-                                                <input type="text" name="email" id="email" placeholder="Email Address*">
-                                                <div class="icon">
-                                                    <i class="fal fa-envelope"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
                                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
                                             <div class="form-clt-big form-clt">
-                                                <textarea name="message" id="message" placeholder="Enter Your Messege here"></textarea>
+                                                <textarea name="message" id="message" placeholder="Escribe aqui tus sugerencias reclamos  preguntas"></textarea>
                                                 <div class="icon">
                                                     <i class="fal fa-edit"></i>
                                                 </div>
@@ -417,7 +422,7 @@
                                             <button type="submit" class="theme-btn">
                                             <span class="button-content-wrapper d-flex align-items-center">
                                             <span class="button-icon"><i class="fal fa-paper-plane"></i></span>
-                                            <span class="button-text">Get In Touch</span>
+                                            <span class="button-text">Enviar</span>
                                             </span>
                                             </button>
                                         </div>
@@ -511,5 +516,21 @@
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+        <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var nombre = document.getElementById('name').value;
+            var mensaje = document.getElementById('message').value;
+            var texto = "Hola, mi nombre es " + (nombre ? nombre : "(no especificado)") + " " +
+                        "Mensaje: " + mensaje;
+            var url = "https://wa.me/59175620296?text=" + encodeURIComponent(texto);
+            window.open(url, '_blank');
+        });
+
+        function enviarPedidoWhatsApp() {
+            var url = "https://wa.me/59175620296?text=" + encodeURIComponent("Quiero hacer un pedido en Pollos Rossy");
+            window.open(url, '_blank');
+        }
+        </script>
     </body>
 </html>
